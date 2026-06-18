@@ -1,0 +1,22 @@
+// ── Reset ────────────────────────────────────────
+// Token CSS files are loaded via project.json styles array.
+// Reset is imported here so it precedes component styles.
+@import 'reset-css/reset.css';
+
+// ── Global base ───────────────────────────────────
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: var(--grey-900);
+}

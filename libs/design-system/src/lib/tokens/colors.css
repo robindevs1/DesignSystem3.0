@@ -1,0 +1,109 @@
+@layer base {
+  :root {
+    /* ── shadcn/ui base vars ─────────────────── */
+    --background: #ffffff;
+    --foreground: #030213;
+    --card: #ffffff;
+    --card-foreground: #030213;
+    --popover: #ffffff;
+    --popover-foreground: #030213;
+    --primary: #030213;
+    --primary-foreground: #ffffff;
+    --secondary: #ececf0;
+    --secondary-foreground: #030213;
+    --muted: #ececf0;
+    --muted-foreground: #717182;
+    --accent: #e9ebef;
+    --accent-foreground: #030213;
+    --destructive: #d4183d;
+    --destructive-foreground: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+    --input: #f3f3f5;
+    --ring: #030213;
+    --radius: 0.625rem;
+
+    /* ── Primitives ──────────────────────────── */
+
+    --white: #ffffff;
+    --black: #000000;
+
+    /* Grey */
+    --grey-25: #fafafa;
+    --grey-50: #f3f3f3;
+    --grey-100: #e6e6e6;
+    --grey-200: #cccccc;
+    --grey-300: #b3b3b3;
+    --grey-400: #999999;
+    --grey-500: #7f7f7f;
+    --grey-600: #666666;
+    --grey-700: #4d4d4d;
+    --grey-800: #333333;
+    --grey-900: #1a1a1a;
+
+    /* Coleman Blue (primary brand) */
+    --coleman-blue-50: #eff6fe;
+    --coleman-blue-100: #e0effe;
+    --coleman-blue-200: #bae0fd;
+    --coleman-blue-300: #7cc7fd;
+    --coleman-blue-400: #0177d2;
+    --coleman-blue-500: #005fa8;
+    --coleman-blue-600: #064d86;
+    --coleman-blue-700: #0b406f;
+    --coleman-blue-800: #082949;
+
+    /* Blue */
+    --blue-50: #ebf5ff;
+    --blue-100: #bfd6ff;
+    --blue-200: #92b6ff;
+    --blue-300: #6697ff;
+    --blue-400: #3375ff;
+    --blue-500: #0052ff;
+    --blue-600: #0042cc;
+    --blue-700: #003199;
+    --blue-800: #00277a;
+
+    /* Green */
+    --green-50: #f0fdf4;
+    --green-100: #dcfce8;
+    --green-200: #bbf7d2;
+    --green-300: #86efaf;
+    --green-400: #4ade85;
+    --green-500: #22c563;
+    --green-600: #16a34e;
+    --green-700: #157f40;
+    --green-800: #166537;
+
+    /* Yellow */
+    --yellow-50: #fffbf2;
+    --yellow-100: #fff6e5;
+    --yellow-200: #fbe3b7;
+    --yellow-300: #ffc657;
+    --yellow-400: #faaf19;
+    --yellow-500: #cf8f36;
+    --yellow-600: #b57520;
+    --yellow-700: #70470d;
+    --yellow-800: #4b2f06;
+
+    /* Red */
+    --red-50: #fff2f2;
+    --red-100: #fdc7c3;
+    --red-200: #fb9d95;
+    --red-300: #f97266;
+    --red-400: #f51400;
+    --red-500: #d41100;
+    --red-600: #b40f00;
+    --red-700: #930c00;
+    --red-800: #731819;
+
+    /* Purple */
+    --purple-50: #f8e8ff;
+    --purple-100: #ebbdff;
+    --purple-200: #de91ff;
+    --purple-300: #d166ff;
+    --purple-400: #b200ff;
+    --purple-500: #9a00dd;
+    --purple-600: #8300bb;
+    --purple-700: #6b0099;
+    --purple-800: #56007a;
+  }
+}

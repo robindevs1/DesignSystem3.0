@@ -21,15 +21,18 @@
             "input": "apps/docs/public"
           }
         ],
-        "styles": ["apps/docs/src/styles.scss"],
-        "server": "apps/docs/src/main.server.ts",
-        "ssr": {
-          "entry": "apps/docs/src/server.ts"
-        },
-        "outputMode": "server"
+        "styles": [
+          "libs/design-system/src/lib/tokens/colors.css",
+          "libs/design-system/src/lib/tokens/typography.css",
+          "libs/design-system/src/lib/tokens/spacing.css",
+          "libs/design-system/src/lib/tokens/radius.css",
+          "libs/design-system/src/lib/tokens/shadows.css",
+          "apps/docs/src/styles.scss"
+        ]
       },
       "configurations": {
         "production": {
+          "baseHref": "/DesignSystem3.0/",
           "budgets": [
             {
               "type": "initial",

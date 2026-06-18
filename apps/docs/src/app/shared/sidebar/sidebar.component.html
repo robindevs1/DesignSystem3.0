@@ -1,0 +1,35 @@
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="logo-mark">
+      <svg fill="none" preserveAspectRatio="none" viewBox="0 0 28.5002 22.8001">
+        <path d="M11.2226 9.97591L4.98796 17.0985H13.5377L19.7724 9.97591H11.2226Z" fill="#B200FF" />
+        <path d="M0 22.8001H8.54975L13.538 17.0987H4.98829L0 22.8001Z" fill="#F51400" />
+        <path d="M28.5002 0H19.9505L11.2231 9.97613H19.7728L28.5002 0Z" fill="#0052FF" />
+      </svg>
+    </div>
+    <div class="brand-text">
+      <span class="brand-name">ERM Design System</span>
+      <span class="brand-version">Version 3.0</span>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-group">
+      <p class="nav-group-label">Foundations</p>
+      @for (item of foundations; track item.id) {
+        <a class="nav-item" [routerLink]="item.route" routerLinkActive="nav-item--active">
+          {{ item.label }}
+        </a>
+      }
+    </div>
+
+    <div class="nav-group">
+      <p class="nav-group-label">Components</p>
+      @for (item of components; track item.id) {
+        <a class="nav-item" [routerLink]="item.route" routerLinkActive="nav-item--active">
+          {{ item.label }}
+        </a>
+      }
+    </div>
+  </nav>
+</aside>

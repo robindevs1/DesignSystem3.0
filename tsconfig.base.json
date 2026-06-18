@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@design-system3.0-angular/design-system": ["libs/design-system/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

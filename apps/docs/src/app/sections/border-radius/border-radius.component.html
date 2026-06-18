@@ -1,0 +1,19 @@
+<docs-section-header title="Border Radius" description="Radius tokens used across UI elements." />
+
+<div class="radius-content">
+  <div class="table-header">
+    <span class="col-name">Name</span>
+    <span class="col-value">Value</span>
+    <span class="col-preview">Radius</span>
+  </div>
+  <div class="divider"></div>
+  @for (t of tokens; track t.token) {
+    <div class="radius-row">
+      <span class="col-name">{{ t.token }}</span>
+      <span class="col-value">{{ t.value }}</span>
+      <div class="col-preview">
+        <div class="preview-box" [style.border-radius.px]="t.value"></div>
+      </div>
+    </div>
+  }
+</div>

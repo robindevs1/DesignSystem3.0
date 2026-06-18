@@ -1,0 +1,22 @@
+<docs-section-header title="Effects" description="Shadow tokens defining elevation levels across the design system." />
+
+<div class="effects-content">
+  <div class="table-header">
+    <span class="col-name">Name</span>
+    <span class="col-value">Value</span>
+    <span class="col-preview">Preview</span>
+  </div>
+  <div class="divider"></div>
+  @for (s of shadows; track s.token) {
+    <div class="shadow-row">
+      <div class="col-name">
+        <span class="shadow-name">{{ s.name }}</span>
+        <span class="shadow-desc">{{ s.description }}</span>
+      </div>
+      <span class="col-value">{{ s.value }}</span>
+      <div class="col-preview">
+        <div class="preview-box" [style.box-shadow]="s.value"></div>
+      </div>
+    </div>
+  }
+</div>

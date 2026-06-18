@@ -1,0 +1,29 @@
+<docs-section-header title="Primitive" description="Core color tokens that form the foundation of the Coleman Design System." />
+
+<div class="colors-content">
+  @for (group of groups; track group.name) {
+    <div class="color-group">
+      <div class="color-group__meta">
+        <span class="color-group__name">{{ group.name }}</span>
+        <div class="color-group__bullets">
+          @for (bullet of bullets(group); track $index) {
+            <div class="bullet-row">
+              <span class="bullet-dot">•</span>
+              <p class="bullet-text" [class.bullet-text--mono]="$last">{{ bullet }}</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="swatch-row">
+        @for (swatch of group.swatches; track swatch.step) {
+          <div class="swatch">
+            <div class="swatch__color" [style.background-color]="swatch.hex" [class.swatch__color--light]="isLight(swatch.hex)"></div>
+            <span class="swatch__step">{{ swatch.step }}</span>
+            <span class="swatch__hex">{{ swatch.hex }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

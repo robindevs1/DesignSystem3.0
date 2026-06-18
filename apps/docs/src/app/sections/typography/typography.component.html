@@ -1,0 +1,23 @@
+<docs-section-header title="Typography" description="Type scale built on Roboto — heading, label, body, and caption styles." />
+
+<div class="typography-content">
+  @for (group of groups; track group.name) {
+    <div class="type-group">
+      <div class="type-group__header">
+        <span class="col-name">Class</span>
+        <span class="col-size">Size</span>
+        <span class="col-weight">Weight</span>
+        <span class="col-preview">Preview</span>
+      </div>
+      <div class="type-group__divider"></div>
+      @for (style of group.styles; track style.className) {
+        <div class="type-row">
+          <span class="type-row__class">.{{ style.className }}</span>
+          <span class="type-row__size">{{ style.size }}px</span>
+          <span class="type-row__weight">{{ style.weight }}</span>
+          <span class="type-row__preview" [class]="style.className">The quick brown fox</span>
+        </div>
+      }
+    </div>
+  }
+</div>

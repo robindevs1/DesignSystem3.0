@@ -1,0 +1,23 @@
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 64px 64px 32px;
+  background-color: #ffffff;
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    color: #1b2733;
+  }
+
+  &__description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #647282;
+  }
+}

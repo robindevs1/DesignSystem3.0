@@ -1,0 +1,12 @@
+<docs-section-header title="Icons" description="Icon set powered by Lucide Angular — 24×24, 1.5px stroke width." />
+
+<div class="icons-content">
+  <div class="icon-grid">
+    @for (item of icons; track item.name) {
+      <div class="icon-card">
+        <lucide-icon [img]="item.icon" [size]="24" [strokeWidth]="1.5" color="#1b2733" />
+        <span class="icon-label">{{ item.name }}</span>
+      </div>
+    }
+  </div>
+</div>
