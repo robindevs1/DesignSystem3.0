@@ -2,17 +2,17 @@
 
 <div class="radius-content">
   <div class="table-header">
-    <span class="col-name">Name</span>
-    <span class="col-value">Value</span>
-    <span class="col-preview">Radius</span>
+    <span class="col-name label-m-medium">Name</span>
+    <span class="col-value label-m-medium">Value</span>
+    <span class="col-preview label-m-medium">Radius</span>
   </div>
   <div class="divider"></div>
   @for (t of tokens; track t.token) {
     <div class="radius-row">
-      <span class="col-name">{{ t.token }}</span>
-      <span class="col-value">{{ t.value }}</span>
+      <span class="col-name label-m-medium mono">{{ t.token }}</span>
+      <span class="col-value body-m-regular mono">{{ t.value }}</span>
       <div class="col-preview">
-        <div class="preview-box" [style.border-radius.px]="t.value"></div>
+        <div class="preview-box" [style.border-radius]="'var(' + t.token + ')'"></div>
       </div>
     </div>
   }

@@ -1,243 +1,72 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {
-  LucideAngularModule,
-  Home,
-  Search,
-  Bell,
-  Settings,
-  User,
-  Mail,
-  Phone,
-  Calendar,
-  Clock,
-  Star,
-  Heart,
-  Bookmark,
-  Share2,
-  Download,
-  Upload,
-  Edit,
-  Trash2,
-  Plus,
-  Minus,
-  X,
-  Check,
-  ChevronDown,
-  ChevronUp,
-  ChevronLeft,
-  ChevronRight,
-  ArrowLeft,
-  ArrowRight,
-  ArrowUp,
-  ArrowDown,
-  Menu,
-  Grid,
-  List,
-  Filter,
-  ArrowUpDown,
-  RefreshCw,
-  Lock,
-  Unlock,
-  Eye,
-  EyeOff,
-  Info,
-  AlertCircle,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  HelpCircle,
-  Camera,
-  Image,
-  File,
-  Folder,
-  FileText,
-  Link,
-  Copy,
-  Clipboard,
-  Mic,
-  Volume2,
-  VolumeX,
-  Play,
-  Pause,
-  Square,
-  SkipForward,
-  SkipBack,
-  Sun,
-  Moon,
-  Cloud,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Map,
-  MapPin,
-  Globe,
-  Send,
-  LogIn,
-  LogOut,
-} from 'lucide-angular';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { SectionHeaderComponent } from '../../shared/section-header/section-header.component';
+
+interface IconItem {
+  name: string;
+  hasFillVariant: boolean;
+}
+
+interface IconSize {
+  px: number;
+  token: string;
+}
+
+const ICONS: IconItem[] = [
+  { name: 'Information', hasFillVariant: true },
+  { name: 'Error', hasFillVariant: true },
+  { name: 'Success', hasFillVariant: true },
+  { name: 'Warning', hasFillVariant: true },
+  { name: 'Plus', hasFillVariant: false },
+  { name: 'Chevron Down', hasFillVariant: false },
+  { name: 'Chevron Up', hasFillVariant: false },
+];
+
+const SIZES: IconSize[] = [
+  { px: 16, token: 'icon-xs' },
+  { px: 20, token: 'icon-sm' },
+  { px: 24, token: 'icon-md' },
+  { px: 28, token: 'icon-lg' },
+  { px: 32, token: 'icon-xl' },
+];
 
 @Component({
   selector: 'docs-icons',
-  imports: [SectionHeaderComponent, LucideAngularModule],
+  imports: [SectionHeaderComponent, FormsModule],
   templateUrl: './icons.component.html',
   styleUrl: './icons.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    {
-      provide: 'LucideIcons',
-      useValue: {
-        Home,
-        Search,
-        Bell,
-        Settings,
-        User,
-        Mail,
-        Phone,
-        Calendar,
-        Clock,
-        Star,
-        Heart,
-        Bookmark,
-        Share2,
-        Download,
-        Upload,
-        Edit,
-        Trash2,
-        Plus,
-        Minus,
-        X,
-        Check,
-        ChevronDown,
-        ChevronUp,
-        ChevronLeft,
-        ChevronRight,
-        ArrowLeft,
-        ArrowRight,
-        ArrowUp,
-        ArrowDown,
-        Menu,
-        Grid,
-        List,
-        Filter,
-        ArrowUpDown,
-        RefreshCw,
-        Lock,
-        Unlock,
-        Eye,
-        EyeOff,
-        Info,
-        AlertCircle,
-        AlertTriangle,
-        CheckCircle,
-        XCircle,
-        HelpCircle,
-        Camera,
-        Image,
-        File,
-        Folder,
-        FileText,
-        Link,
-        Copy,
-        Clipboard,
-        Mic,
-        Volume2,
-        VolumeX,
-        Play,
-        Pause,
-        Square,
-        SkipForward,
-        SkipBack,
-        Sun,
-        Moon,
-        Cloud,
-        Wifi,
-        Bluetooth,
-        Battery,
-        Map,
-        MapPin,
-        Globe,
-        Send,
-        LogIn,
-        LogOut,
-      },
-    },
-  ],
 })
 export class IconsComponent {
-  readonly icons = [
-    { name: 'Home', icon: Home },
-    { name: 'Search', icon: Search },
-    { name: 'Bell', icon: Bell },
-    { name: 'Settings', icon: Settings },
-    { name: 'User', icon: User },
-    { name: 'Mail', icon: Mail },
-    { name: 'Phone', icon: Phone },
-    { name: 'Calendar', icon: Calendar },
-    { name: 'Clock', icon: Clock },
-    { name: 'Star', icon: Star },
-    { name: 'Heart', icon: Heart },
-    { name: 'Bookmark', icon: Bookmark },
-    { name: 'Share', icon: Share2 },
-    { name: 'Download', icon: Download },
-    { name: 'Upload', icon: Upload },
-    { name: 'Edit', icon: Edit },
-    { name: 'Trash', icon: Trash2 },
-    { name: 'Plus', icon: Plus },
-    { name: 'Minus', icon: Minus },
-    { name: 'Close', icon: X },
-    { name: 'Check', icon: Check },
-    { name: 'Chevron Down', icon: ChevronDown },
-    { name: 'Chevron Up', icon: ChevronUp },
-    { name: 'Chevron Left', icon: ChevronLeft },
-    { name: 'Chevron Right', icon: ChevronRight },
-    { name: 'Arrow Left', icon: ArrowLeft },
-    { name: 'Arrow Right', icon: ArrowRight },
-    { name: 'Arrow Up', icon: ArrowUp },
-    { name: 'Arrow Down', icon: ArrowDown },
-    { name: 'Menu', icon: Menu },
-    { name: 'Grid', icon: Grid },
-    { name: 'List', icon: List },
-    { name: 'Filter', icon: Filter },
-    { name: 'Sort', icon: ArrowUpDown },
-    { name: 'Refresh', icon: RefreshCw },
-    { name: 'Lock', icon: Lock },
-    { name: 'Unlock', icon: Unlock },
-    { name: 'Eye', icon: Eye },
-    { name: 'Eye Off', icon: EyeOff },
-    { name: 'Info', icon: Info },
-    { name: 'Alert Circle', icon: AlertCircle },
-    { name: 'Alert Triangle', icon: AlertTriangle },
-    { name: 'Check Circle', icon: CheckCircle },
-    { name: 'X Circle', icon: XCircle },
-    { name: 'Help Circle', icon: HelpCircle },
-    { name: 'Camera', icon: Camera },
-    { name: 'Image', icon: Image },
-    { name: 'File', icon: File },
-    { name: 'Folder', icon: Folder },
-    { name: 'File Text', icon: FileText },
-    { name: 'Link', icon: Link },
-    { name: 'Copy', icon: Copy },
-    { name: 'Clipboard', icon: Clipboard },
-    { name: 'Mic', icon: Mic },
-    { name: 'Volume', icon: Volume2 },
-    { name: 'Mute', icon: VolumeX },
-    { name: 'Play', icon: Play },
-    { name: 'Pause', icon: Pause },
-    { name: 'Stop', icon: Square },
-    { name: 'Skip Forward', icon: SkipForward },
-    { name: 'Skip Back', icon: SkipBack },
-    { name: 'Sun', icon: Sun },
-    { name: 'Moon', icon: Moon },
-    { name: 'Cloud', icon: Cloud },
-    { name: 'Wifi', icon: Wifi },
-    { name: 'Bluetooth', icon: Bluetooth },
-    { name: 'Battery', icon: Battery },
-    { name: 'Map', icon: Map },
-    { name: 'Map Pin', icon: MapPin },
-    { name: 'Globe', icon: Globe },
-    { name: 'Send', icon: Send },
-    { name: 'Log In', icon: LogIn },
-    { name: 'Log Out', icon: LogOut },
-  ];
+  readonly icons = ICONS;
+  readonly sizes = SIZES;
+
+  playgroundIcon = signal<IconItem>(ICONS[0]);
+  playgroundSize = signal<IconSize>(SIZES[2]);
+
+  selectPlaygroundIcon(name: string): void {
+    const icon = ICONS.find(i => i.name === name);
+    if (icon) {
+      this.playgroundIcon.set(icon);
+    }
+  }
+
+  selectPlaygroundSize(token: string): void {
+    const size = SIZES.find(s => s.token === token);
+    if (size) {
+      this.playgroundSize.set(size);
+    }
+  }
+
+  toFileName(name: string): string {
+    return name.toLowerCase().replace(/\s+/g, '-');
+  }
+
+  outlinedFile(icon: IconItem): string {
+    return `${this.toFileName(icon.name)}${icon.hasFillVariant ? '-outlined' : ''}.svg`;
+  }
+
+  filledFile(icon: IconItem): string {
+    return `${this.toFileName(icon.name)}-filled.svg`;
+  }
 }

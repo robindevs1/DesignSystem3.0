@@ -10,15 +10,17 @@ interface NavItem {
 const FOUNDATIONS: NavItem[] = [
   { id: 'colors', label: 'Colors', route: '/colors' },
   { id: 'typography', label: 'Typography', route: '/typography' },
+  { id: 'spacing', label: 'Spacing', route: '/spacing' },
   { id: 'border-radius', label: 'Border Radius', route: '/border-radius' },
   { id: 'effects', label: 'Effects', route: '/effects' },
-  { id: 'spacing', label: 'Spacing', route: '/spacing' },
   { id: 'icons', label: 'Icons', route: '/icons' },
 ];
 
 const COMPONENTS: NavItem[] = [
   { id: 'buttons', label: 'Buttons', route: '/buttons' },
-  { id: 'input-fields', label: 'Input Fields', route: '/input-fields' },
+  // Input Fields is hidden from the nav while it's a work in progress.
+  // The /input-fields route still exists for direct preview.
+  // { id: 'input-fields', label: 'Input Fields', route: '/input-fields' },
 ];
 
 @Component({

@@ -1,6 +1,6 @@
 .effects-content {
   background: #ffffff;
-  padding: 48px 64px;
+  padding: var(--spacing-48) var(--spacing-64);
 }
 
 .table-header,
@@ -10,57 +10,43 @@
 }
 
 .table-header {
-  padding-bottom: 12px;
+  padding-bottom: var(--spacing-12);
 }
 
 .divider {
   height: 1px;
   background: #000000;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-40);
 }
 
 .col-name {
-  flex: 1;
-  font-family: 'Roboto', sans-serif;
+  flex: 0 0 200px;
 }
 .col-value {
-  flex: 0 0 320px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 13px;
-  color: #647282;
+  flex: 0 0 420px;
+  color: var(--grey-900);
 }
 .col-preview {
-  flex: 0 0 128px;
+  flex: 0 0 300px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: var(--spacing-64);
 }
 
 .table-header {
   .col-name,
   .col-value,
   .col-preview {
-    font-size: 16px;
-    font-weight: 500;
-    color: #1b2733;
+    color: var(--grey-900);
   }
 }
 
 .shadow-row {
-  padding: 40px 0;
-}
+  padding: var(--spacing-24) 0;
 
-.shadow-name {
-  display: block;
-  font-size: 20px;
-  font-weight: 500;
-  color: #1b2733;
-}
-
-.shadow-desc {
-  display: block;
-  font-size: 12px;
-  color: #647282;
-  margin-top: 4px;
+  .col-name {
+    color: var(--grey-900);
+  }
 }
 
 .preview-box {

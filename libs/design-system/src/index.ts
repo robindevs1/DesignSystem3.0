@@ -2,4 +2,4 @@
 // Design tokens live in ./lib/tokens (CSS, loaded via apps/docs/project.json
 // styles array). Shared Angular components will be exported from here as the
 // library grows — e.g. export * from './lib/components/<name>/<name>.component';
-export {};
+export * from './lib/components/button/button.component';

@@ -1,11 +1,67 @@
-<docs-section-header title="Icons" description="Icon set powered by Lucide Angular — 24×24, 1.5px stroke width." />
+<docs-section-header title="Icons" description="Coleman icon set sourced from Material Symbols — outlined and filled variants." />
 
 <div class="icons-content">
+  <!-- ── Playground ───────────────────────────── -->
+  <div class="playground">
+    <div class="playground-controls">
+      <label class="control">
+        <span class="control-label label-s-medium">Icon</span>
+        <select class="control-select body-m-regular" [ngModel]="playgroundIcon().name" (ngModelChange)="selectPlaygroundIcon($event)">
+          @for (icon of icons; track icon.name) {
+            <option [value]="icon.name">{{ icon.name }}</option>
+          }
+        </select>
+      </label>
+
+      <label class="control">
+        <span class="control-label label-s-medium">Size</span>
+        <select
+          class="control-select body-m-regular mono"
+          [ngModel]="playgroundSize().token"
+          (ngModelChange)="selectPlaygroundSize($event)"
+        >
+          @for (size of sizes; track size.token) {
+            <option [value]="size.token">.{{ size.token }} — {{ size.px }}px</option>
+          }
+        </select>
+      </label>
+    </div>
+
+    <div class="playground-stage">
+      <img
+        [src]="'/assets/icons/' + outlinedFile(playgroundIcon())"
+        [alt]="playgroundIcon().name"
+        [width]="playgroundSize().px"
+        [height]="playgroundSize().px"
+      />
+    </div>
+  </div>
+
+  <!-- ── Grid ─────────────────────────────────── -->
   <div class="icon-grid">
-    @for (item of icons; track item.name) {
+    @for (icon of icons; track icon.name) {
       <div class="icon-card">
-        <lucide-icon [img]="item.icon" [size]="24" [strokeWidth]="1.5" color="#1b2733" />
-        <span class="icon-label">{{ item.name }}</span>
+        <span class="icon-name label-m-medium">{{ icon.name }}</span>
+
+        <div class="icon-preview">
+          <div class="icon-preview-item">
+            <img [src]="'/assets/icons/' + outlinedFile(icon)" [alt]="icon.name + ' outlined'" width="32" height="32" />
+            <span class="preview-label body-s-regular">Outlined</span>
+          </div>
+          @if (icon.hasFillVariant) {
+            <div class="icon-preview-item">
+              <img [src]="'/assets/icons/' + filledFile(icon)" [alt]="icon.name + ' filled'" width="32" height="32" />
+              <span class="preview-label body-s-regular">Filled</span>
+            </div>
+          }
+        </div>
+
+        <div class="icon-files">
+          <code>{{ outlinedFile(icon) }}</code>
+          @if (icon.hasFillVariant) {
+            <code>{{ filledFile(icon) }}</code>
+          }
+        </div>
       </div>
     }
   </div>

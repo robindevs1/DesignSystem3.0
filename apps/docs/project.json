@@ -27,6 +27,7 @@
           "libs/design-system/src/lib/tokens/spacing.css",
           "libs/design-system/src/lib/tokens/radius.css",
           "libs/design-system/src/lib/tokens/shadows.css",
+          "libs/design-system/src/lib/tokens/icons.css",
           "apps/docs/src/styles.scss"
         ]
       },

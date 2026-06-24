@@ -6,21 +6,21 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-xl-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-xl-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .heading-l-bold {
@@ -28,21 +28,21 @@
   font-size: 32px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-l-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-l-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .heading-m-bold {
@@ -50,21 +50,21 @@
   font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-m-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-m-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .heading-s-bold {
@@ -72,21 +72,21 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-s-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-s-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .heading-xs-bold {
@@ -94,21 +94,21 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-xs-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .heading-xs-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 /* Labels */
@@ -117,21 +117,21 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-xl-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-xl-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .label-l-bold {
@@ -139,21 +139,21 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-l-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-l-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .label-m-bold {
@@ -161,21 +161,21 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-m-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-m-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .label-s-bold {
@@ -183,21 +183,21 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-s-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-s-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .label-xs-bold {
@@ -205,37 +205,52 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-xs-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .label-xs-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 /* Body */
+.body-xl-medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.0025em;
+}
+.body-xl-regular {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.0025em;
+}
+
 .body-l-medium {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .body-l-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .body-m-medium {
@@ -243,14 +258,14 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .body-m-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
 .body-s-medium {
@@ -258,64 +273,17 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 .body-s-regular {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.0025em;
 }
 
-/* Captions (italic) */
-.caption-l-medium {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.25px;
-}
-.caption-l-regular {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.25px;
-}
-
-.caption-m-medium {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.25px;
-}
-.caption-m-regular {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.25px;
-}
-
-.caption-s-medium {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.25px;
-}
-.caption-s-regular {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 0.25px;
+/* ── Monospace for coded values (px, em, rem, hex, tokens) ── */
+.mono {
+  font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }

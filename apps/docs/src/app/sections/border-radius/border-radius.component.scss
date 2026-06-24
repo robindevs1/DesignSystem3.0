@@ -1,60 +1,51 @@
 .radius-content {
   background: #ffffff;
-  padding: 48px 64px;
+  padding: var(--spacing-48) var(--spacing-64);
 }
 
 .table-header,
 .radius-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .table-header {
-  padding-bottom: 12px;
+  padding-bottom: var(--spacing-12);
 }
 
 .divider {
   height: 1px;
   background: #000000;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-40);
 }
 
 .col-name {
-  width: 140px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  flex: 0 0 200px;
 }
 .col-value {
-  width: 80px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  text-align: center;
+  flex: 0 0 96px;
 }
 .col-preview {
-  width: 80px;
+  flex: 0 0 128px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .table-header {
   .col-name,
   .col-value,
   .col-preview {
-    font-weight: 500;
-    color: #1b2733;
+    color: var(--grey-900);
   }
 }
 
 .radius-row {
-  padding: 24px 0;
+  padding: var(--spacing-24) 0;
   .col-name {
-    font-weight: 500;
-    color: #1b2733;
+    color: var(--grey-900);
   }
   .col-value {
-    font-weight: 600;
-    color: #1b2733;
+    color: var(--grey-900);
   }
 }
 

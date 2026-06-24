@@ -1,0 +1,31 @@
+/* ── Icon size classes ───────────────────────── */
+.icon-xs {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+.icon-sm {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+.icon-md {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+.icon-lg {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+}
+.icon-xl {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+}

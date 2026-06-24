@@ -4,12 +4,12 @@
   @for (group of groups; track group.name) {
     <div class="color-group">
       <div class="color-group__meta">
-        <span class="color-group__name">{{ group.name }}</span>
+        <span class="color-group__name label-l-bold">{{ group.name }}</span>
         <div class="color-group__bullets">
           @for (bullet of bullets(group); track $index) {
             <div class="bullet-row">
-              <span class="bullet-dot">•</span>
-              <p class="bullet-text" [class.bullet-text--mono]="$last">{{ bullet }}</p>
+              <span class="bullet-dot label-s-regular">•</span>
+              <p class="bullet-text label-s-regular" [class.bullet-text--mono]="$last">{{ bullet }}</p>
             </div>
           }
         </div>
@@ -19,8 +19,8 @@
         @for (swatch of group.swatches; track swatch.step) {
           <div class="swatch">
             <div class="swatch__color" [style.background-color]="swatch.hex" [class.swatch__color--light]="isLight(swatch.hex)"></div>
-            <span class="swatch__step">{{ swatch.step }}</span>
-            <span class="swatch__hex">{{ swatch.hex }}</span>
+            <span class="swatch__step label-s-medium">{{ swatch.step }}</span>
+            <span class="swatch__hex body-s-regular mono">{{ swatch.hex }}</span>
           </div>
         }
       </div>

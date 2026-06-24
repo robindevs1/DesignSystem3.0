@@ -1,0 +1,252 @@
+/* ──────────────────────────────────────────────
+ * Button — Coleman Design System
+ * Imported from Figma (node 223:1115). Variants:
+ *   type  : primary | secondary | tertiary | destructive
+ *   size  : large | medium | small
+ *   state : active | hovered | pressed | focused | disabled
+ * Interaction states use real pseudo-classes; the `.is-*`
+ * classes force a state for documentation previews.
+ * ────────────────────────────────────────────── */
+
+:host {
+  display: inline-flex;
+}
+
+.ds-btn {
+  // Typography comes from the global label-*-medium foundation classes,
+  // applied to .ds-btn__label in the template (per button size).
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.12s,
+    border-color 0.12s,
+    box-shadow 0.12s,
+    color 0.12s;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.ds-btn__label {
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+.ds-btn__icon {
+  display: block;
+  flex-shrink: 0;
+  background-color: currentColor;
+  /* Icon URL is passed via a CSS custom property so Angular's style
+   * sanitizer doesn't strip the url() from the mask binding. */
+  -webkit-mask-image: var(--ds-btn-icon-url);
+  mask-image: var(--ds-btn-icon-url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* ── Sizes ───────────────────────────────────── */
+/* Vertical paddings round to spacing tokens, giving heights of 48 / 41 / 34px. */
+.ds-btn--large {
+  gap: var(--spacing-8);
+  padding: var(--spacing-12) var(--spacing-16);
+  border-radius: var(--radius-8);
+
+  .ds-btn__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.ds-btn--medium {
+  gap: var(--spacing-8);
+  padding: var(--spacing-10) var(--spacing-16);
+  border-radius: var(--radius-8);
+
+  .ds-btn__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.ds-btn--small {
+  gap: var(--spacing-6);
+  padding: var(--spacing-8) var(--spacing-12);
+  border-radius: var(--radius-4);
+
+  .ds-btn__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ── Primary ─────────────────────────────────── */
+.ds-btn--primary {
+  background: var(--coleman-blue-400);
+  color: var(--white);
+
+  &:enabled:hover,
+  &.is-hovered {
+    background: var(--coleman-blue-500);
+  }
+  &:focus-visible,
+  &.is-focused {
+    outline: none;
+    background: var(--coleman-blue-400);
+    box-shadow: 0 0 0 3px var(--coleman-blue-300);
+  }
+  &:enabled:active,
+  &.is-pressed {
+    background: var(--coleman-blue-600);
+  }
+  &:disabled {
+    background: var(--coleman-blue-200);
+  }
+}
+
+/* ── Secondary ───────────────────────────────── */
+.ds-btn--secondary {
+  background: var(--coleman-blue-100);
+  color: var(--coleman-blue-500);
+
+  &:enabled:hover,
+  &.is-hovered {
+    background: var(--coleman-blue-200);
+  }
+  &:focus-visible,
+  &.is-focused {
+    outline: none;
+    background: var(--coleman-blue-100);
+    box-shadow: 0 0 0 3px var(--coleman-blue-400);
+  }
+  &:enabled:active,
+  &.is-pressed {
+    background: var(--coleman-blue-300);
+  }
+  &:disabled {
+    background: var(--coleman-blue-50);
+    color: var(--coleman-blue-300);
+  }
+}
+
+/* ── Tertiary (outline) ──────────────────────── */
+.ds-btn--tertiary {
+  background: var(--white);
+  color: var(--coleman-blue-400);
+  border: 1.5px solid var(--coleman-blue-400);
+
+  &:enabled:hover,
+  &.is-hovered {
+    background: var(--coleman-blue-50);
+  }
+  &:focus-visible,
+  &.is-focused {
+    outline: none;
+    background: var(--white);
+    box-shadow: 0 0 0 2px var(--coleman-blue-400);
+  }
+  &:enabled:active,
+  &.is-pressed {
+    background: var(--coleman-blue-100);
+  }
+  &:disabled {
+    color: var(--coleman-blue-200);
+    border-color: var(--coleman-blue-200);
+  }
+}
+
+/* ── Destructive ─────────────────────────────── */
+.ds-btn--destructive {
+  background: var(--red-600);
+  color: var(--white);
+
+  &:enabled:hover,
+  &.is-hovered {
+    background: var(--red-700);
+  }
+  &:focus-visible,
+  &.is-focused {
+    outline: none;
+    background: var(--red-600);
+    box-shadow: 0 0 0 3px var(--red-200);
+  }
+  &:enabled:active,
+  &.is-pressed {
+    background: var(--red-800);
+  }
+  &:disabled {
+    background: var(--red-200);
+  }
+}
+
+/* ── Neutral (grey outline) ──────────────────── */
+.ds-btn--neutral {
+  background: var(--white);
+  color: var(--grey-700);
+  border: 1.5px solid var(--grey-100);
+
+  &:enabled:hover,
+  &.is-hovered {
+    background: var(--grey-50);
+  }
+  &:focus-visible,
+  &.is-focused {
+    outline: none;
+    background: var(--white);
+    box-shadow: 0 0 0 2px var(--grey-300);
+  }
+  &:enabled:active,
+  &.is-pressed {
+    background: var(--grey-100);
+  }
+  &:disabled {
+    color: var(--grey-300);
+    border-color: var(--grey-50);
+  }
+}
+
+/* ── Link (reads as a hyperlink — never a button) ──
+ * No background, border, or shadow in any state; states follow link
+ * conventions. Disabled uses [aria-disabled] (set in the template), not the
+ * native attribute, so it stays keyboard-focusable and announced. */
+.ds-btn--link {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--coleman-blue-400);
+
+  &:not(:disabled):not([aria-disabled='true']) {
+    &:hover,
+    &.is-hovered {
+      color: var(--coleman-blue-500);
+      text-decoration: underline;
+    }
+    &:active,
+    &.is-pressed {
+      color: var(--coleman-blue-600);
+    }
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    outline: 2px solid var(--coleman-blue-400);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  &[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+}

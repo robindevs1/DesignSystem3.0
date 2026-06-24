@@ -1,23 +1,119 @@
-<docs-section-header title="Buttons" description="Button variants, sizes, and states." />
+<docs-section-header
+  title="Buttons"
+  description="Interactive playground for the Coleman button — control type, size, state, icons, and label."
+/>
 
 <div class="buttons-content">
-  <div class="group">
-    <h2 class="group-title">Variants</h2>
-    <div class="button-row">
-      <button class="btn btn--primary">Primary</button>
-      <button class="btn btn--secondary">Secondary</button>
-      <button class="btn btn--ghost">Ghost</button>
-      <button class="btn btn--destructive">Destructive</button>
-      <button class="btn btn--disabled" disabled>Disabled</button>
+  <div class="playground">
+    <!-- ── Controls ─────────────────────────── -->
+    <div class="playground-controls">
+      <label class="control">
+        <span class="control-label label-s-medium">Text</span>
+        <input class="control-input body-m-regular" type="text" [value]="label()" (input)="label.set($any($event.target).value)" />
+      </label>
+
+      <label class="control">
+        <span class="control-label label-s-medium">Type</span>
+        <select class="control-select body-m-regular" [ngModel]="variant()" (ngModelChange)="setVariant($event)">
+          @for (v of variants; track v) {
+            <option [value]="v">{{ titleCase(v) }}</option>
+          }
+        </select>
+      </label>
+
+      <label class="control">
+        <span class="control-label label-s-medium">Size</span>
+        <select class="control-select body-m-regular" [ngModel]="size()" (ngModelChange)="setSize($event)">
+          @for (s of sizes; track s) {
+            <option [value]="s">{{ titleCase(s) }}</option>
+          }
+        </select>
+      </label>
+
+      <label class="control">
+        <span class="control-label label-s-medium">State</span>
+        <select class="control-select body-m-regular" [ngModel]="state()" (ngModelChange)="setState($event)">
+          @for (st of states; track st) {
+            <option [value]="st">{{ st }}</option>
+          }
+        </select>
+      </label>
+
+      <label class="control">
+        <span class="control-label label-s-medium">Icon</span>
+        <select class="control-select body-m-regular" [ngModel]="iconFile()" (ngModelChange)="setIcon($event)">
+          @for (ic of icons; track ic.file) {
+            <option [value]="ic.file">{{ ic.name }}</option>
+          }
+        </select>
+      </label>
+
+      <label class="control">
+        <span class="control-label label-s-medium">Icon Size</span>
+        <select class="control-select body-m-regular mono" [ngModel]="iconSize()" (ngModelChange)="setIconSize($event)">
+          @for (is of iconSizes; track is.token) {
+            <option [value]="is.token">.icon-{{ is.token }} — {{ is.px }}px</option>
+          }
+        </select>
+      </label>
+
+      <div class="control-toggles">
+        <label class="toggle">
+          <input type="checkbox" [checked]="leadingIcon()" (change)="leadingIcon.set($any($event.target).checked)" />
+          <span class="body-m-regular">Leading icon</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" [checked]="trailingIcon()" (change)="trailingIcon.set($any($event.target).checked)" />
+          <span class="body-m-regular">Trailing icon</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- ── Stage ────────────────────────────── -->
+    <div class="playground-stage">
+      <div class="stage-preview">
+        <ds-button
+          [variant]="variant()"
+          [size]="size()"
+          [label]="label()"
+          [leadingIcon]="leadingIcon()"
+          [trailingIcon]="trailingIcon()"
+          [icon]="iconPath()"
+          [iconSize]="iconSize()"
+          [forceState]="forceState()"
+          [disabled]="isDisabled()"
+        />
+      </div>
+
+      <div class="stage-code">
+        <div class="stage-code__toolbar">
+          <button type="button" class="code-btn label-s-medium" (click)="copy()">
+            {{ copied() ? 'Copied' : 'Copy' }}
+          </button>
+          <button type="button" class="code-btn label-s-medium" (click)="reset()">Reset</button>
+        </div>
+        <pre class="stage-code__pre mono"><code>{{ codeSnippet() }}</code></pre>
+      </div>
     </div>
   </div>
 
-  <div class="group">
-    <h2 class="group-title">Sizes</h2>
-    <div class="button-row button-row--align-center">
-      <button class="btn btn--primary btn--sm">Small</button>
-      <button class="btn btn--primary">Medium</button>
-      <button class="btn btn--primary btn--lg">Large</button>
-    </div>
+  <!-- ── Variant overview (all type × size × state, no icons) ── -->
+  <div class="overview">
+    <h2 class="overview-title heading-s-bold">All variations</h2>
+    @for (v of variants; track v) {
+      <section class="overview-group">
+        <h3 class="overview-group__title label-l-bold">{{ titleCase(v) }}</h3>
+        @for (s of sizes; track s) {
+          <div class="overview-line">
+            <span class="overview-line__label label-s-medium">{{ titleCase(s) }}</span>
+            <div class="overview-row">
+              @for (st of states; track st) {
+                <ds-button [variant]="v" [size]="s" [label]="st" [forceState]="forceFor(st)" [disabled]="disabledFor(st)" />
+              }
+            </div>
+          </div>
+        }
+      </section>
+    }
   </div>
 </div>

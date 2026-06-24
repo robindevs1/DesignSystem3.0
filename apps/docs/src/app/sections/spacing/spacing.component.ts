@@ -12,5 +12,5 @@ const MAX = 96;
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SpacingComponent {
-  readonly tokens = TOKENS.map(v => ({ token: `spacing-${v}`, value: v, barWidth: (v / MAX) * 320 }));
+  readonly tokens = TOKENS.map(v => ({ token: `--spacing-${v}`, value: v, barWidth: (v / MAX) * 320 }));
 }

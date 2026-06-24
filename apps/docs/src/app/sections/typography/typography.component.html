@@ -1,21 +1,39 @@
-<docs-section-header title="Typography" description="Type scale built on Roboto — heading, label, body, and caption styles." />
+<docs-section-header
+  title="Typography"
+  description="Type scale built on Roboto (ENG) and Noto Sans JP — heading, label, and body styles."
+/>
 
 <div class="typography-content">
+  <div class="font-toggle">
+    <button class="font-btn label-s-medium" [class.font-btn--active]="selectedLang() === 'eng'" (click)="selectedLang.set('eng')">
+      ENG
+    </button>
+    <button class="font-btn label-s-medium" [class.font-btn--active]="selectedLang() === 'jp'" (click)="selectedLang.set('jp')">JP</button>
+  </div>
+
   @for (group of groups; track group.name) {
     <div class="type-group">
+      <h2 class="type-group__title heading-s-bold">{{ group.name }}</h2>
       <div class="type-group__header">
-        <span class="col-name">Class</span>
-        <span class="col-size">Size</span>
-        <span class="col-weight">Weight</span>
-        <span class="col-preview">Preview</span>
+        <span class="col-name label-m-medium">Class</span>
+        <span class="col-size label-m-medium">Size</span>
+        <span class="col-weight label-m-medium">Weight</span>
+        <span class="col-lh label-m-medium">Line Height</span>
+        <span class="col-ls label-m-medium">Letter Spacing</span>
+        <span class="col-preview label-m-medium">Preview</span>
       </div>
       <div class="type-group__divider"></div>
       @for (style of group.styles; track style.className) {
         <div class="type-row">
-          <span class="type-row__class">.{{ style.className }}</span>
-          <span class="type-row__size">{{ style.size }}px</span>
-          <span class="type-row__weight">{{ style.weight }}</span>
-          <span class="type-row__preview" [class]="style.className">The quick brown fox</span>
+          <span class="type-row__class label-m-medium mono">.{{ style.className }}</span>
+          <div class="type-row__size">
+            <span class="body-m-regular mono">{{ style.size }}px</span>
+            <span class="size-rem body-s-regular mono">{{ toRem(style.size) }}</span>
+          </div>
+          <span class="type-row__weight body-m-regular mono">{{ style.weight }}</span>
+          <span class="type-row__lh body-m-regular mono">{{ style.lineHeight }}</span>
+          <span class="type-row__ls body-m-regular mono">{{ style.letterSpacing ?? '—' }}</span>
+          <span class="type-row__preview" [class]="previewClass(style.className)">{{ previewText() }}</span>
         </div>
       }
     </div>

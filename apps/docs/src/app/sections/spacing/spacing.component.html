@@ -2,15 +2,15 @@
 
 <div class="spacing-content">
   <div class="table-header">
-    <span class="col-name">Name</span>
-    <span class="col-value">Value</span>
-    <span class="col-bar">Spacing</span>
+    <span class="col-name label-m-medium">Name</span>
+    <span class="col-value label-m-medium">Value</span>
+    <span class="col-bar label-m-medium">Spacing</span>
   </div>
   <div class="divider"></div>
   @for (t of tokens; track t.token) {
     <div class="spacing-row">
-      <span class="col-name">{{ t.token }}</span>
-      <span class="col-value">{{ t.value }}px</span>
+      <span class="col-name label-m-medium mono">{{ t.token }}</span>
+      <span class="col-value body-m-regular mono">{{ t.value }}px</span>
       <div class="col-bar">
         <div class="bar" [style.width.px]="t.barWidth"></div>
       </div>

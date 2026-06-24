@@ -1,6 +1,6 @@
 .spacing-content {
   background: #ffffff;
-  padding: 48px 64px;
+  padding: var(--spacing-48) var(--spacing-64);
 }
 
 .table-header,
@@ -10,24 +10,20 @@
 }
 
 .table-header {
-  padding-bottom: 12px;
+  padding-bottom: var(--spacing-12);
 }
 
 .divider {
   height: 1px;
   background: #000000;
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-40);
 }
 
 .col-name {
   flex: 0 0 200px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
 }
 .col-value {
   flex: 0 0 96px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
 }
 .col-bar {
   flex: 1;
@@ -39,20 +35,17 @@
   .col-name,
   .col-value,
   .col-bar {
-    font-weight: 500;
-    color: #1b2733;
+    color: var(--grey-900);
   }
 }
 
 .spacing-row {
-  padding: 16px 0;
+  padding: var(--spacing-16) 0;
   .col-name {
-    font-weight: 500;
-    color: #1b2733;
+    color: var(--grey-900);
   }
   .col-value {
-    font-weight: 600;
-    color: #1b2733;
+    color: var(--grey-900);
   }
 }
 

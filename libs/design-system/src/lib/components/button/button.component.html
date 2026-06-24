@@ -1,0 +1,25 @@
+<button type="button" [class]="buttonClasses()" [disabled]="nativeDisabled()" [attr.aria-disabled]="ariaDisabled()">
+  @if (leadingIcon() && icon()) {
+    <ng-container [ngTemplateOutlet]="iconTpl"></ng-container>
+  }
+  <span
+    class="ds-btn__label"
+    [class.label-m-medium]="size() === 'large'"
+    [class.label-s-medium]="size() === 'medium'"
+    [class.label-xs-medium]="size() === 'small'"
+    >{{ label() }}</span
+  >
+  @if (trailingIcon() && icon()) {
+    <ng-container [ngTemplateOutlet]="iconTpl"></ng-container>
+  }
+</button>
+
+<ng-template #iconTpl>
+  <span
+    class="ds-btn__icon"
+    aria-hidden="true"
+    [style.--ds-btn-icon-url]="iconMask()"
+    [style.width.px]="iconPx()"
+    [style.height.px]="iconPx()"
+  ></span>
+</ng-template>

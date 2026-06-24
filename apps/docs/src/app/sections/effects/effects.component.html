@@ -2,20 +2,17 @@
 
 <div class="effects-content">
   <div class="table-header">
-    <span class="col-name">Name</span>
-    <span class="col-value">Value</span>
-    <span class="col-preview">Preview</span>
+    <span class="col-name label-m-medium">Name</span>
+    <span class="col-value label-m-medium">Value</span>
+    <span class="col-preview label-m-medium">Preview</span>
   </div>
   <div class="divider"></div>
   @for (s of shadows; track s.token) {
     <div class="shadow-row">
-      <div class="col-name">
-        <span class="shadow-name">{{ s.name }}</span>
-        <span class="shadow-desc">{{ s.description }}</span>
-      </div>
-      <span class="col-value">{{ s.value }}</span>
+      <span class="col-name label-m-medium mono">{{ s.token }}</span>
+      <span class="col-value body-m-regular mono">{{ s.value }}</span>
       <div class="col-preview">
-        <div class="preview-box" [style.box-shadow]="s.value"></div>
+        <div class="preview-box" [style.box-shadow]="'var(' + s.token + ')'"></div>
       </div>
     </div>
   }
