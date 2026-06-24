@@ -29,7 +29,7 @@
 
     <div class="playground-stage">
       <img
-        [src]="'/assets/icons/' + outlinedFile(playgroundIcon())"
+        [src]="'assets/icons/' + outlinedFile(playgroundIcon())"
         [alt]="playgroundIcon().name"
         [width]="playgroundSize().px"
         [height]="playgroundSize().px"
@@ -45,12 +45,12 @@
 
         <div class="icon-preview">
           <div class="icon-preview-item">
-            <img [src]="'/assets/icons/' + outlinedFile(icon)" [alt]="icon.name + ' outlined'" width="32" height="32" />
+            <img [src]="'assets/icons/' + outlinedFile(icon)" [alt]="icon.name + ' outlined'" width="32" height="32" />
             <span class="preview-label body-s-regular">Outlined</span>
           </div>
           @if (icon.hasFillVariant) {
             <div class="icon-preview-item">
-              <img [src]="'/assets/icons/' + filledFile(icon)" [alt]="icon.name + ' filled'" width="32" height="32" />
+              <img [src]="'assets/icons/' + filledFile(icon)" [alt]="icon.name + ' filled'" width="32" height="32" />
               <span class="preview-label body-s-regular">Filled</span>
             </div>
           }

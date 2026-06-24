@@ -40,7 +40,7 @@ export class ButtonsComponent {
   iconSize = signal<ButtonIconSize>('md');
   label = signal<string>('Button');
 
-  readonly iconPath = computed(() => `/assets/icons/${this.iconFile()}`);
+  readonly iconPath = computed(() => `assets/icons/${this.iconFile()}`);
 
   readonly forceState = computed<ButtonForceState>(() => this.forceFor(this.state()));
   readonly isDisabled = computed(() => this.disabledFor(this.state()));
