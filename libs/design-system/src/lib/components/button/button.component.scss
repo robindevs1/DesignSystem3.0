@@ -55,10 +55,19 @@
 }
 
 /* ── Sizes ───────────────────────────────────── */
-/* Vertical paddings round to spacing tokens, giving heights of 48 / 41 / 34px. */
+/* Most dimensions step down consistently across sizes:
+ *   gap     10 → 8  → 6   (step 2)
+ *   pad-y   12 → 10 → 8   (step 2)
+ *   pad-x   20 → 16 → 12  (step 4)
+ *   icon    24 → 20 → 16  (step 4)
+ * Border radius is intentionally uniform (radius-8) on every size.
+ * Heights = 2·pad-y + tallest child (label line-height or icon):
+ *   large  24 + max(24,24) = 48
+ *   medium 20 + max(21,20) = 41
+ *   small  16 + max(18,16) = 34 */
 .ds-btn--large {
-  gap: var(--spacing-8);
-  padding: var(--spacing-12) var(--spacing-16);
+  gap: var(--spacing-10);
+  padding: var(--spacing-12) var(--spacing-20);
   border-radius: var(--radius-8);
 
   .ds-btn__icon {
@@ -81,7 +90,7 @@
 .ds-btn--small {
   gap: var(--spacing-6);
   padding: var(--spacing-8) var(--spacing-12);
-  border-radius: var(--radius-4);
+  border-radius: var(--radius-8);
 
   .ds-btn__icon {
     width: 16px;
@@ -192,7 +201,7 @@
 .ds-btn--neutral {
   background: var(--white);
   color: var(--grey-700);
-  border: 1.5px solid var(--grey-100);
+  border: 1.5px solid var(--grey-400);
 
   &:enabled:hover,
   &.is-hovered {
